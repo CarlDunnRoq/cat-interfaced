@@ -6,6 +6,10 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class CatTest {
+	private int runningSpeed(Running runner) {
+		return(runner.running());
+	}
+	
 	@Test
 	public void testInitialState() {
 		Cat cat = new Cat();
@@ -47,6 +51,18 @@ public class CatTest {
 		Monkey monkey = new Monkey();
 		assertEquals(monkey.typewrites(), 3);
 		assertTrue(monkey.spits());
+	}
+	
+	@Test
+	public void polymorphicTest() {
+		Running camel = new Camel();
+		Running lynx = new Lynx();
+		Running wolf = new Wolf();
+		Running cat = new Cat();
+		assertEquals(this.runningSpeed(camel), 65);
+		assertEquals(this.runningSpeed(lynx), 80);
+		assertEquals(this.runningSpeed(wolf), 55);
+		assertEquals(this.runningSpeed(cat), 48);
 	}
 }
 	

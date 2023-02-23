@@ -1,6 +1,6 @@
 package com.credersi.animals;
 
-public class Camel extends Animal implements Spits {
+public class Camel extends Animal implements Spits, Running {
 	public Camel() { }
 	
 	public boolean spits() {

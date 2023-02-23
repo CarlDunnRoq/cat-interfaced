@@ -4,6 +4,6 @@ public class Wolf extends Animal implements Running{
 	public Wolf() {	}
 	
 	public int running() {
-		return 80;
+		return 55;
 	}
 }
